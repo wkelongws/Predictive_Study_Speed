@@ -161,7 +161,7 @@ public class TrafficDataPull extends Configured implements Tool {
 			String hh = time.substring(0,2);
 			String mm = time.substring(2,4);
 			String ss = time.substring(4,6);
-			int minnum = Integer.parseInt(mm)/5;			
+			int minnum = Integer.parseInt(mm)/1;			
 			
 			
 			
@@ -382,7 +382,7 @@ public class TrafficDataPull extends Configured implements Tool {
 			String month = date.split("/")[0];
 			String day = date.split("/")[1];
 			String hour = lines[2];
-			String minute = Integer.toString(5*Integer.parseInt(lines[3]));
+			String minute = Integer.toString(1*Integer.parseInt(lines[3]));
 			
 			String name = lines[0];
 			if(Sensors.contains(name))
@@ -448,9 +448,9 @@ public class TrafficDataPull extends Configured implements Tool {
 								{
 								for (int h=0; h<24; h++)
 					    		{
-					    			for (int m5=0; m5<12; m5++)
+					    			for (int m5=0; m5<60; m5++)
 					    			{
-					    				put(h*100+m5*5, "0");
+					    				put(h*100+m5*1, "0");
 					    			}
 					    		}
 								}
@@ -466,9 +466,9 @@ public class TrafficDataPull extends Configured implements Tool {
 								{
 								for (int h=0; h<24; h++)
 					    		{
-					    			for (int m5=0; m5<12; m5++)
+					    			for (int m5=0; m5<60; m5++)
 					    			{
-					    				put(h*100+m5*5, "0");
+					    				put(h*100+m5*1, "0");
 					    			}
 					    		}
 								}
